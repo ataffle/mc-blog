@@ -1,2 +1,8 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h1>Simplifier et sécuriser la location</h1>
+<p>Nos derniers posts</p>
+<% @posts.each do |post| %>
+  <%= post.title  %>
+  <%= post.content %>
+  <%= post.user %>
+<% end %>
+
