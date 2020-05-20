@@ -1,8 +1,13 @@
 <h1>Simplifier et sécuriser la location</h1>
 <p>Nos derniers posts</p>
 <% @posts.each do |post| %>
-  <%= post.title  %>
-  <%= post.content %>
-  <%= post.user %>
+  <ul>
+    <%= post.title  %><br>
+    <%= post.content %><br>
+    <%= post.user %><br>
+    <br>
+    <br>
+  </ul>
+
 <% end %>
 
