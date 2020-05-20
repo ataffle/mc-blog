@@ -17,6 +17,6 @@ post_3 = { title: "Louis D, le beau gosse nous livre ses secrets", content: "Lou
 
 [ post_1, post_2, post_3 ].each do |attributes|
   post = Post.create!(attributes)
-  puts "Created #{post.name}"
+  puts "Created #{post.title}"
 end
 puts "Finished!"
