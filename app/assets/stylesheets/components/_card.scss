@@ -2,19 +2,44 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  :hover {
-    box-shadow: 4px 4px 16px rgba(0,0,0,0.2);
-    cursor: pointer;
-  }
 }
-
 
 .card {
   border-radius: 4px;
-  width: 280px;
-  height: 400px;
+  width: 320px;
+  height: 480px;
   background: white;
   box-shadow: 2px 2px 4px rgba(30,30,30,0.2);
   margin: 0px auto;
   padding: 16px;
+  &:hover {
+    box-shadow: 4px 4px 16px rgba(0,0,0,0.2);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  a {
+  text-decoration: none;
+    &:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+  }
+}
+
+.images {
+  margin: 8px auto 16px;
+  width: 90%;
+  height: 40%;
+}
+
+.category {
+  font-size: 14px;
+  color: $orange;
+}
+
+.author {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }

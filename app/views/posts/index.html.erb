@@ -3,11 +3,14 @@
   <div class="cards">
     <% @posts.each do |post| %>
       <div class="card">
-        <%= image_tag "logo.png", width: 200 %>
+        <%= image_tag "logo.png", class: "images" %>
         <h2><%= post.title  %></h2>
-        <p>Catégorie: <%= post.category.title %></p>
+        <a href="#" class="category"><%= post.category.title %></a>
         <p><%= post.content %></p>
-        <p>De : <%= post.user.email %></p>
+         <div class="author">
+          <%= image_tag "Alix.jpg", class: "avatar-large" %>
+          <a href="" class="category"><%= post.user.email %></a>
+        </div>
         <br>
       </div>
     <% end %>
