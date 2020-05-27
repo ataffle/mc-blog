@@ -7,25 +7,18 @@ h1 {
 }
 
 h2 {
-  font-size: 18px;
-  font-weight: 600px;
+  font-size: 16px;
+  font-weight: 600;
   color: $blue;
   margin-bottom: 0px;
   // text-align: center;
 }
 
 p {
-  color: $dark-grey;
+  color: $p-grey;
 }
 
 a {
   text-decoration: none;
 }
 
-.orange {
-  color: $orange;
-}
-
-.blue {
-  color: $blue;
-}
