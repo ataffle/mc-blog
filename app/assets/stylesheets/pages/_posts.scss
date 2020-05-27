@@ -10,13 +10,22 @@ h2 {
   font-size: 18px;
   font-weight: 600px;
   color: $blue;
-  text-align: center;
+  margin-bottom: 0px;
+  // text-align: center;
 }
 
 p {
-  color: #5A5A5A;
+  color: $dark-grey;
 }
 
 a {
   text-decoration: none;
+}
+
+.orange {
+  color: $orange;
+}
+
+.blue {
+  color: $blue;
 }
