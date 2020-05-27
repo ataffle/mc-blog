@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   get 'posts/index'
   get 'categories/index'
   devise_for :users
