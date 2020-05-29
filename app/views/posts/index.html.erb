@@ -6,7 +6,8 @@
         <%= image_tag "post3.jpg", class: "images" %>
         <div class="details">
           <a href="#" class="orange"><%= post.category.title %></a>
-          <p>&nbsp- 27 mai 2020</p>
+          <!-- <p>&nbsp- <%= post.updated_at.strftime("%e %B %Y") %></p> -->
+          <p>&nbsp- <%= l(post.updated_at, :format => '%d %B %Y') %></p>
         </div>
         <div class="title">
           <h2><a href="#"><%= post.title  %></a></h2>
