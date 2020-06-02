@@ -16,7 +16,7 @@
           <p><%= post.content %></p>
         </div>
         <div class="author">
-          <%= image_tag "Alix.jpg", class: "avatar-large" %>
+          <%= cl_image_tag post.user.photo.key, height: 56, width: 56, crop: :fill, class: "avatar-large" %>
           <div class="role">
             <%= link_to post.user.full_name, author_path(post.user) %></a>
             <p><%= post.user.title %></p>
