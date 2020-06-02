@@ -1,7 +1,7 @@
-<div class="main-container">
-  <h1>Simplifier et sécuriser la location</h1>
+<div class="container">
+  <h1><%= @user.full_name %></h1>
   <div class="cards">
-    <% @posts.each do |post| %>
+    <% @user.posts.each do |post| %>
       <div class="card">
         <%= image_tag "post3.jpg", class: "images" %>
         <div class="details">
@@ -26,5 +26,3 @@
     <% end %>
   </div>
 </div>
-
-
