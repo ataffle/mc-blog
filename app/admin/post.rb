@@ -10,5 +10,5 @@ ActiveAdmin.register Post do
       actions
     end
 
-  permit_params :title, :content, :category_id, :user_id
+  permit_params :title, :content, :category_id, :user_id, :photo
 end

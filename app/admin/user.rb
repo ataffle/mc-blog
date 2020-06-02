@@ -20,6 +20,7 @@ ActiveAdmin.register User do
     f.inputs "Details" do
       f.input :full_name
       f.input :title
+      f.input :photo, as: :file
     end
     f.inputs "Access" do
       f.input :admin
@@ -28,5 +29,5 @@ ActiveAdmin.register User do
     f.actions
   end
 
-  permit_params :email, :full_name, :admin, :author, :title
+  permit_params :email, :full_name, :admin, :author, :title, :photo
 end
