@@ -3,7 +3,7 @@
   <div class="cards">
     <% @category.posts.each do |post| %>
       <div class="card">
-        <%= image_tag "post3.jpg", class: "images" %>
+        <%= cl_image_tag post.photo.key, class: "images" %>
         <div class="details">
           <%= link_to post.category.title, category_path(post.category) %>
           <!-- <p>&nbsp- <%= post.updated_at.strftime("%e %B %Y") %></p> -->
