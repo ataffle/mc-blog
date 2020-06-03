@@ -3,7 +3,11 @@
   <div class="cards">
     <% @posts.each do |post| %>
       <div class="card">
-        <%= cl_image_tag post.photo.key, class: "images" %>
+        <% if post.photo.attached?  %>
+          <%= cl_image_tag post.photo.key, class: "images" %>
+        <% else %>
+          <%= image_tag "post.jpg", class: "images" %>
+        <% end %>
         <div class="details">
           <%= link_to post.category.title, category_path(post.category) %>
           <!-- <p>&nbsp- <%= post.updated_at.strftime("%e %B %Y") %></p> -->
@@ -16,7 +20,11 @@
           <p><%= post.content %></p>
         </div>
         <div class="author">
-          <%= cl_image_tag post.user.photo.key, height: 56, width: 56, crop: :fill, class: "avatar-large" %>
+          <% if post.user.photo.attached? %>
+            <%= cl_image_tag post.user.photo.key, height: 56, width: 56, crop: :fill, class: "avatar-large" %>
+          <% else %>
+            <%= image_tag "logo-avatar.jpg", class: "avatar-large" %>
+          <% end %>
           <div class="role">
             <%= link_to post.user.full_name, author_path(post.user) %></a>
             <p><%= post.user.title %></p>
