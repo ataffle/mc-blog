@@ -2,6 +2,8 @@
   justify-content: space-between;
   align-items: center;
   background: white;
+  border-bottom: 1px solid #dedede;
+  // drop-shadow: 2px 2px 16px rgba(30,30,30, 0.2);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,4 +12,15 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: bolder;
+  color: $orange;
 }
