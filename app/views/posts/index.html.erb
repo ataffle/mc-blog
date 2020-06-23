@@ -10,7 +10,6 @@
         <% end %>
         <div class="details">
           <%= link_to post.category.title, category_path(post.category) %>
-          <!-- <p>&nbsp- <%= post.updated_at.strftime("%e %B %Y") %></p> -->
           <p>&nbsp- <%= l(post.updated_at, :format => '%d %B %Y') %></p>
         </div>
         <div class="title">
