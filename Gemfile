@@ -21,6 +21,8 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 gem 'cloudinary', '~> 1.12.0'
 
+gem 'image_processing', '~> 1.2'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
