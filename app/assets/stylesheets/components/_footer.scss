@@ -2,5 +2,16 @@
   margin-top: 24px;
   background-color: #3a3839;
   width: 100%;
-  height: 96px;
+  height: 120px;
+  padding: 24px 0px;
+  p {
+    font-size: 13px;
+    color: #a5a5a5;
+  }
+}
+
+.footer-breadcrumb {
+  p {
+    margin-bottom: 0px;
+  }
 }
