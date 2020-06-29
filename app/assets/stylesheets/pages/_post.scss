@@ -39,7 +39,7 @@
 
 .post-picture {
   text-align: center;
-  margin-top: 32px;
+  margin: 32px auto 0;
 }
 
 .post-sharing {
@@ -72,5 +72,15 @@
 @media(max-width: 768px) {
   .post-author {
     width: 70%;
+  }
+  .post-sharing {
+    justify-content: center;
+  }
+}
+
+@media(max-width: 626px) {
+  .img {
+    width: 200px;
+    height: 120px;
   }
 }
