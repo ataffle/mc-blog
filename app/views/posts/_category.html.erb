@@ -1,0 +1,37 @@
+<div class="main-container">
+  <div class="cards">
+    <% category.posts.each do |post| %>
+      <% if post != current_post %>
+        <div class="card">
+          <% if post.photo.attached?  %>
+            <%= cl_image_tag post.photo.key, class: "images" %>
+          <% else %>
+            <%= image_tag "post.jpg", class: "images" %>
+          <% end %>
+          <div class="details">
+            <%= link_to post.category.title, category_path(post.category) %>
+            <!-- <p>&nbsp- <%= post.updated_at.strftime("%e %B %Y") %></p> -->
+            <p>&nbsp- <%= l(post.updated_at, :format => '%d %B %Y') %></p>
+          </div>
+          <div class="title">
+            <h2><%= link_to post.title, post_path(post)  %></a></h2>
+          </div>
+          <div class="summary">
+            <p><%= post.content %></p>
+          </div>
+          <div class="author">
+            <% if post.user.photo.attached? %>
+              <%= cl_image_tag post.user.photo.key, height: 56, width: 56, crop: :fill, class: "avatar-large" %>
+            <% else %>
+              <%= image_tag "logo-avatar.jpg", class: "avatar-large" %>
+            <% end %>
+            <div class="role">
+              <%= link_to post.user.full_name, author_path(post.user) %></a>
+              <p><%= post.user.title %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
