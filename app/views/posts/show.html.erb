@@ -1,4 +1,3 @@
-<body style="background-color: white;">
 <div class="post-wrapper">
   <div class="main-container">
     <h1><%= @post.title %></h1>
@@ -54,11 +53,6 @@
       <%= render "posts/category", category: @post.category, current_post: @post %>
     </div>
   </div>
+<% else %>
+  <body style="background-color: white;">
 <% end %>
-<!-- <div class="post-categories">
-  <div class="main-container">
-    <h2>Dans la même catégorie</h2>
-
-  </div>
-</div> -->
-
