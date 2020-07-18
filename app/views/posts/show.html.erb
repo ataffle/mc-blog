@@ -47,6 +47,14 @@
     </div>
   </div>
 </div>
+<% if @post.category.posts.count > 1 %>
+  <div class="category-wrapper">
+    <div class="main-container">
+      <h4>De la même catégorie</h4>
+      <%= render "posts/category", category: @post.category, current_post: @post %>
+    </div>
+  </div>
+<% end %>
 <!-- <div class="post-categories">
   <div class="main-container">
     <h2>Dans la même catégorie</h2>

@@ -12,6 +12,21 @@
   padding-top: 24px;
 }
 
+.category-wrapper {
+  background-color: $lighter-grey;
+  padding: 32px 0px;
+  width: 100%;
+  h4 {
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 24px;
+    color: $blue;
+  }
+  // .footer {
+  //   margin-top: 0px;
+  // }
+}
+
 .center {
   justify-content: center;
 }
