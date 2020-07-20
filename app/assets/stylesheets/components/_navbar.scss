@@ -49,6 +49,18 @@
     color: $orange;
     margin-right: 8px;
   }
+  #query {
+    border: none;
+    background-color: $very-light-grey;
+    padding: 0px;
+    margin: 0px;
+    color: $p-grey;
+    opacity: 0.7;
+    &:focus {
+      outline: none;
+      width: 90%;
+    }
+  }
 }
 
 h1 {
