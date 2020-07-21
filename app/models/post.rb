@@ -4,8 +4,10 @@ class Post < ApplicationRecord
   belongs_to :user
   default_scope { order(updated_at: :desc) }
   has_one_attached :photo
-  pg_search_scope :search_by_title_and_content,
-    against: [ :title, :content ],
+  pg_search_scope :global_search,
+    against: { title: 'A', content: 'B' },
+    associated_against: { user: [:full_name], category: [:title] },
+    # ignoring: :accents,
     using: {
       tsearch: { prefix: true }
     }
