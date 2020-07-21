@@ -56,9 +56,9 @@
     margin: 0px;
     color: $p-grey;
     opacity: 0.7;
+    width: 90%;
     &:focus {
       outline: none;
-      width: 90%;
     }
   }
 }
@@ -67,4 +67,12 @@ h1 {
   font-size: 18px;
   font-weight: bolder;
   color: $orange;
+}
+
+
+@media(max-width: 768px) {
+  .search-bar {
+    width: 60%;
+    padding: 8px 16px;
+  }
 }
