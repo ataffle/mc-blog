@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 
   def index
     if params[:query].present?
-      @posts = Post.search_by_title_and_content(params[:query])
+      @posts = Post.global_search(params[:query])
     else
       @posts = Post.all
     end
