@@ -14,19 +14,23 @@
             <p>&nbsp- <%= l(post.updated_at, :format => '%d %B %Y') %></p>
           </div>
           <div class="title">
-            <h2><%= link_to post.title, post_path(post)  %></a></h2>
+            <h2><%= link_to post.title, post_path(post)  %></h2>
           </div>
           <div class="summary">
-            <p><%= post.content %></p>
+            <%= link_to post_path(post), style: "margin-left: 0px;" do %>
+              <p><%= post.content %></p>
+            <% end %>
           </div>
           <div class="author">
-            <% if post.user.photo.attached? %>
-              <%= cl_image_tag post.user.photo.key, height: 56, width: 56, crop: :fill, class: "avatar-large" %>
-            <% else %>
-              <%= image_tag "logo-avatar.jpg", class: "avatar-large" %>
+            <%= link_to author_path(post.user), style: "margin-left: 0px;" do %>
+              <% if post.user.photo.attached? %>
+                <%= cl_image_tag post.user.photo.key, height: 56, width: 56, crop: :fill, class: "avatar-large" %>
+              <% else %>
+                <%= image_tag "logo-avatar.jpg", class: "avatar-large" %>
+              <% end %>
             <% end %>
             <div class="role">
-              <%= link_to post.user.full_name, author_path(post.user) %></a>
+              <%= link_to post.user.full_name, author_path(post.user) %>
               <p><%= post.user.title %></p>
             </div>
           </div>
