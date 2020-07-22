@@ -2,7 +2,7 @@
   margin-top: 24px;
   background-color: #3a3839;
   width: 100%;
-  height: 120px;
+  height: 190px;
   padding: 24px 0px;
   p {
     font-size: 13px;
@@ -14,4 +14,41 @@
   p {
     margin-bottom: 0px;
   }
+}
+
+.footer-susbscribe {
+  font-weight: bold;
+  margin-top: 16px;
+  p {
+    color: white;
+    margin-bottom: 0px;
+  }
+  .susbscribe-form {
+    display: flex;
+    align-items: center;
+    .subscribe-input {
+      margin-top: 8px;
+      background-color: white;
+      border-radius: 4px;
+      height: 32px;
+      width: 45%;
+      padding: 0 0 0 8px;
+      font-size: 13px;
+      border: 1px solid #dedede;
+      box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      p {
+        color: $orange;
+        font-weight: bolder;
+      }
+    }
+    .btn-orange {
+      font-size: 13px;
+      margin: 8px 0 0 16px;
+      padding: 7px 16px;
+    }
+  }
+
 }
