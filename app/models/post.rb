@@ -3,6 +3,8 @@ class Post < ApplicationRecord
   belongs_to :user
   default_scope { order(updated_at: :desc) }
   has_one_attached :photo
+  validates :title, presence: true
+  validates :content, presence: true
 
   include PgSearch::Model
   pg_search_scope :global_search,
